@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.config-btn {
+  @apply bg-gray-200 px-2 py-1 text-sm;
+}
+.required {
+  @apply text-red-500;
+}
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: .5s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
