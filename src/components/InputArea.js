@@ -32,8 +32,11 @@ const InputArea = ({addUndoItem}) => {
     setWarningStatusFun(value)
   }, [setWarningStatusFun, setInputValue])
   const pressKeyFun = useCallback((e) => {
-    if(e.code === 'Enter') addUndoItemFun()
-  }, [addUndoItemFun])
+    if(e.code === 'Enter') {
+      const result = setWarningStatusFun(inputValue)
+      if(result) addUndoItemFun()
+    }
+  }, [addUndoItemFun, inputValue, setWarningStatusFun])
   return (
     <div className="ring-1 ring-gray-200 w-full py-4 px-4">
       <h1 className="text-3xl font-bold">待辦事項</h1>

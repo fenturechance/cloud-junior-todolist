@@ -7,10 +7,7 @@ const setTimeString = (finishTime) => {
   else return `${Math.floor(diff * 60 * 60)}秒前`
 }
 const UndoListArea = ({
-  undoList,
   finishList,
-  setUndoList,
-  setFinishList,
 }) => {
   return (
     <ul className="fadeIn">
